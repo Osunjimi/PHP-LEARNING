@@ -67,19 +67,20 @@ for ($i=0; $i <= 10 ; $i++) {
 //multiplication table from 5 time to 10
 for ($j = 5; $j <= 10; $j++) {
     for ($i = 1; $i <= 12; $i++) {
-        echo "$j x $i = " . ($i * $j) . "<br>";
+        echo "$j x $i = " . ($j * $i) . "<br>";
     }
     echo "<br>";
 }
 
 
-
+//sum of all even numbers between 1 to 10
 $a = 1;
-$sum = 0;
+$sum = 0; //counter to store the sum of all even numbers
 
 while ($a <= 10) {
     if ($a % 2 == 0) {
         $sum += $a;
+        // $sum = $sum + $a; (this is the same as the above)
     }
     $a++;
 }
@@ -87,10 +88,69 @@ while ($a <= 10) {
 echo "The sum of all even numbers between 1 to 10 is: $sum";
 
 
+//while loop
+echo "<br>";
+$num = 1;
+while ($num <= 10) {
+    echo $num. "<br>";
+    $num++;
+}
+
+echo "<br>";
+$num2 = 0;
+while ($num2 <= 100) {
+   echo $num2. "<br>";
+    $num2 += 10;
+}
+
+echo "<br>";
+//do while loop
+$numb = 0;
+do {
+    echo $numb ."<br>";  
+    $numb++;  
+} while ($numb <= 10);
 
 
+echo "<br>";
+//do while loop to calculate the sum of all even numbers between 1 to 10
+$firstNum = 1;
+$sum = 0;
+do {
+    if ($firstNum % 2 == 0) {
+        $sum += $firstNum;
+        // $sum = $sum + $firstNum; (this is the same as the above)
+    }
+    $firstNum++;
+} while ($firstNum <= 10);
+echo "sum of all even numbers between 1 to 10 is: $sum";
 
 
+echo "<br>";
+//foreach loop
+$food = ["Rice", "Beans", "Yam", "Egusi", "Amala"];
+foreach ($food as $value) {
+    echo $value . "<br>";
+}
 
+
+//index array is almost close to associative array : here's the proof from the above index array
+echo "<br>";
+foreach ($food as $key => $value) {
+    echo $key . " " . $value . "<br>";
+}
+
+
+//using foreach loop with associative array
+$protein = [
+    "Rice" => "Chicken",
+     "Beans" => "Fish", 
+     "Yam" => "Egg", 
+     "Egusi" => "Meat", 
+     "Amala" => "Turkey"
+    ];
+    foreach ($protein as $key => $value) {
+        echo $key . ' goes with ' . $value . "<br>";
+    }  
 
 ?>
